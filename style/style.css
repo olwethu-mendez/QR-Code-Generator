@@ -15,9 +15,15 @@ body{
 
 .card{
     background-color: #130e20;
+    height: 260px;
     max-width: 90vw; /*410px*/
     border-radius: 7px;
     padding: 16px 25px;
+    transition: height 0.2s ease;
+}
+
+.card.active{
+    height: 530px;
 }
 
 header h1{
@@ -31,7 +37,7 @@ header p{
 }
 
 .card .form{
-    margin: 20px 0 30px;
+    margin: 20px 0 25px;
 }
 
 .form :where(input, button){
@@ -46,6 +52,7 @@ header p{
     font-size: 18px;
     padding: 0 17px;
     border: 1px solid #999;
+    color: #777;
 }
 
 .form button{
@@ -56,7 +63,32 @@ header p{
 }
 
 .card .qr-code{
+    opacity: 0;
+    pointer-events: none;
     border: 1px;
     padding: 33px 0;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.card.active .qr-code{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.5s ease;
+}
+
+.close-qr{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;;
+}
+
+@media only screen and (min-width: 992px) {
+    .card{
+        max-width: 410px;
+    }
 }
