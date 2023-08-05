@@ -88,15 +88,9 @@ header p{
     cursor: pointer;
 }
 
-@media only screen and (min-width: 992px) {
-    .card{
-        width: 410px;
-    }
-}
-
 .card-2{
     width: 90vw;
-    min-height: 450px;
+    height: 520px; /*450px*/
     background-color: #130e20;
     border-radius: 7px;
     padding: 16px 25px;
@@ -105,4 +99,10 @@ header p{
 
 #video{
     width:100%;
+}
+
+@media only screen and (min-width: 992px) {
+    .card, .card-2{
+        width: 410px;
+    }
 }
