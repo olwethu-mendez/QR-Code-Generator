@@ -88,21 +88,8 @@ header p{
     cursor: pointer;
 }
 
-.card-2{
-    width: 90vw;
-    height: 520px; /*450px*/
-    background-color: #130e20;
-    border-radius: 7px;
-    padding: 16px 25px;
-    transition: height 0.2s ease;
-}
-
-#video{
-    width:100%;
-}
-
 @media only screen and (min-width: 992px) {
-    .card, .card-2{
+    .card{
         width: 410px;
     }
 }
