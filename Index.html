@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <div class="card">
+    <div class="card qr-generator-container">
         <header>
             <h1>QR Code Generator</h1>
             <p>Paste URL link or enter text to generate a QR code</p>
@@ -18,9 +18,24 @@
         </div>
         <div class="qr-code">
             <span class="close-qr">✕</span>
-            <img src="" alt="qr-code"
+            <img src="" alt="qr-code">
         </div>
     </div>
+    
+    <div class="card-2 qr-scanner-container">
+        <header>
+            <h1>QR Code Scanner</h1>
+            <p>Scan your qr code to decode the encoded data.</p>
+        </header>
+        <div class="form">
+            <video id="video" autoplay></video>
+            <button id="capture">Capture</button>
+            <canvas id="canvas" style="display:none;"></canvas>
+        </div>
+    </div>
+        <div class="qr-output">
+            <p id="result"></p>
+        </div>
     <script src="script/script.js"></script>
 </body>
 </html>

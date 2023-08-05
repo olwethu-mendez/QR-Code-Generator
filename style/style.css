@@ -7,6 +7,7 @@
 
 body{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
@@ -16,7 +17,7 @@ body{
 .card{
     background-color: #130e20;
     height: 260px;
-    max-width: 90vw; /*410px*/
+    width: 90vw; /*410px*/
     border-radius: 7px;
     padding: 16px 25px;
     transition: height 0.2s ease;
@@ -36,7 +37,7 @@ header p{
     margin-top: 5px;
 }
 
-.card .form{
+.form{
     margin: 20px 0 25px;
 }
 
@@ -84,11 +85,24 @@ header p{
     position: absolute;
     top: 5px;
     right: 5px;
-    cursor: pointer;;
+    cursor: pointer;
 }
 
 @media only screen and (min-width: 992px) {
     .card{
-        max-width: 410px;
+        width: 410px;
     }
+}
+
+.card-2{
+    width: 90vw;
+    min-height: 450px;
+    background-color: #130e20;
+    border-radius: 7px;
+    padding: 16px 25px;
+    transition: height 0.2s ease;
+}
+
+#video{
+    width:100%;
 }
