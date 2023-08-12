@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     color: #E9DFE0;
+    font-family: 'Poppins', 'League Spartan', Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -16,15 +17,17 @@ body{
 
 .card{
     background-color: #130e20;
-    height: 260px;
+    height: 275px;
     width: 90vw; /*410px*/
     border-radius: 7px;
     padding: 16px 25px;
     transition: height 0.2s ease;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .card.active{
-    height: 530px;
+    height: 550px;
 }
 
 header h1{
@@ -67,18 +70,29 @@ header p{
     opacity: 0;
     pointer-events: none;
     border: 1px;
-    padding: 33px 0;
+    padding: 11px 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 1px solid #ccc;
     position: relative;
 }
 
+.card .downloadQr{
+    display: none;
+    pointer-events: none;
+}
+
 .card.active .qr-code{
     opacity: 1;
     pointer-events: auto;
     transition: opacity 0.5s 0.5s ease;
+}
+
+.card.active .downloadQr{
+    display: block;
+    pointer-events: auto;
 }
 
 .close-qr{
@@ -88,8 +102,21 @@ header p{
     cursor: pointer;
 }
 
-@media only screen and (min-width: 992px) {
+.downloadQr{
+    border: none;
+    outline: none;
+    width: 85%;
+    height: 40px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 600;
+    background: #a43acb;
+    border-radius: 5;
+}
+
+@media only screen and (min-width: 400px) {
     .card{
-        width: 410px;
+        max-width: 410px;
     }
 }
